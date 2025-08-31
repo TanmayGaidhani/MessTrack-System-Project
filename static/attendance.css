@@ -1,0 +1,89 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Body with Gradient Background */
+body {
+    background: linear-gradient(135deg, #ae91db, #ab9c9c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Attendance Container */
+.attendance-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    max-width: 90%;
+    text-align: center;
+}
+
+/* Heading */
+.attendance-container h2 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Inputs */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+/* Main Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7b2ff7;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5e20c6;
+}
+
+/* Back Button */
+#back-button {
+    margin-top: 16px;
+    background-color: #f44336;
+}
+
+#back-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Optional Message */
+#message {
+    margin-top: 12px;
+    color: green;
+    font-weight: 500;
+}

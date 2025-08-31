@@ -1,0 +1,286 @@
+/* Reset & Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* Container */
+.container {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1000px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+.nav {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    background-color: transparent;
+}
+
+.nav .btn,
+.nav .back-btn {
+    background-color: gray;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav .btn:hover,
+.nav .back-btn:hover {
+    background-color: #6c4bbb;
+    color: white;
+}
+
+/* Fixed Back Button */
+.back-button,
+.back-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.back-button:hover,
+.back-btn:hover {
+    background-color: #6c4bbb;
+}
+
+/* Form Styling */
+form#dateForm {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+form#dateForm label {
+    font-weight: 600;
+    margin-right: 10px;
+    color: #333;
+}
+
+form#dateForm input[type="date"] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form#dateForm input[type="date"]:focus {
+    border-color: #6c4bbb;
+}
+
+form#dateForm button {
+    margin-left: 12px;
+    padding: 9px 18px;
+    font-size: 16px;
+    background-color: #6c4bbb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form#dateForm button:hover {
+    background-color: #543d9d;
+}
+
+/* Info and Loading */
+.info-msg,
+.loading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-msg {
+    color: #555;
+    font-style: italic;
+}
+
+.loading {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Table Styling */
+table {
+    width: 90%;
+    margin: 0 auto 40px;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #8d61d4;
+    color: white;
+}
+
+th,
+td {
+    padding: 14px 18px;
+    text-align: center;
+    font-size: 15px;
+    color: #2f3640;
+    border-bottom: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Status Colors */
+.paid,
+.present {
+    color: green;
+    font-weight: 700;
+}
+
+.not-paid,
+.absent {
+    color: red;
+    font-weight: 700;
+}
+
+/* Summary Box */
+.summary-box {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.summary-box .present {
+    color: green;
+}
+
+.summary-box .absent {
+    color: red;
+}
+
+/* Download Button */
+.download-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#downloadPDF {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#downloadPDF:hover {
+    background-color: blueviolet;
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        padding: 12px 15px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    td:before {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+        color: #2f3640;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Student Name";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Mobile Number";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Payment Status";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Month";
+    }
+}

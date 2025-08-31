@@ -1,0 +1,9 @@
+{
+  "params": {
+    "secret_key": "yoursecret",
+    "gmail_user": "yourmail@gmail.com",
+    "gmail_password": "your_app_password",
+    "mongo_uri": "mongodb://localhost:27017/HostelMesstrack"
+  }
+}
+

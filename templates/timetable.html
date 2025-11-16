@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mess Time-Table</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='timetable.css') }}" />
+    <!-- For download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mess Time-Table</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Day</th>
+                    <th colspan="2">Breakfast</th>
+                    <th colspan="2">Lunch</th>
+                    <th colspan="2">Dinner</th>
+                </tr>
+                <tr>
+                    <th>Menu</th>
+                    <th>Time</th>
+                    <th>Menu</th>
+                    <th>Time</th>
+                    <th>Menu</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in timetable %}
+                <tr>
+                    <td class="day">{{ item.day }}</td>
+                    <td>{{ item.breakfast or "NULL" }}</td>
+                    <td>{{ item.breakfast_time or "N/A" }}</td>
+                    <td>{{ item.lunch or "NULL" }}</td>
+                    <td>{{ item.lunch_time or "N/A" }}</td>
+                    <td>{{ item.dinner or "NULL" }}</td>
+                    <td>{{ item.dinner_time or "N/A" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="button-group">
+            <button id="download">Download</button>
+            <button onclick="window.location.href='/index'">Back</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='timetable.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+{
+    "params": {
+        "local_server": "true",
+        "mongo_uri": "mongodb://localhost:27017/messtrack",
+        "secret_key": "Enter secret_key",
+        "gmail_user": "Enter your gmail",
+        "gmail_password": "Enter scret code"
+    }
+}
